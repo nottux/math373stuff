@@ -1,0 +1,104 @@
+Superscript:
+¹²³⁴⁵⁶⁷⁸⁹⁰⁻⁺.
+
+Subscript:
+₁₂₃₄₅₆₇₈₉₀₋₊.
+
+∞
+
+HW1: Separate the root of x²-3x-1=0 using analytical method
+Solution1:
+f(x)=x³-3x-1
+f'(x)=3x²-3=3(x²-1)
+Roots: {-1,1}
+
+_____x_______|-∞|-1|1|∞__
+sign of f(x) |- |+ |-|+
+________________▼..▼.▼
+3 roots
+
+_____x_______|-2|-1|0|1|2__
+sign of f(x) |- |+ |-|-|+
+________________▼..▼...▼
+
+x₀ ∈ [-2,-1]
+x₁ ∈ [-1,0]
+x₂ ∈ [1,2]
+
+HW2: Use newton's method to find the root of the equation on x-sin(x)=0.25 which lies on [0.982, 1.178]. With an accuracy of ϵ = 0.0001
+Solution2:
+f(x)=x-sin(x)-0.25
+f'(x)=-cos(x)+1
+f''(x)=sin(x)
+f(0.982)=-0.0996097538
+f(1.178)=0.0041576859
+f(b)f''(x)>0
+x₀=1.178
+x₁=x₀-(f(x₀)/f'(x₀))=1.1712639243
+x₂=1.1712296534 // meets accuracy requirements
+x₃=1.1712296525
+
+root=x₂ // can be also x₃
+
+HW3: use the method of iterations to find the root of x³+3x²-3=0 on [-2.75,-2.5] with an accuracy of ϵ = 0.001
+Solution3:
+f(x)=x³+3x²-3
+-x³=3x²-3
+x³=-3x²+3
+g(x)=x=³√(-3x²+3)
+g'(x)=(1/3)((-3x²+3)^(-2/3))(-6(x))
+I choose to use median value: x₀=(-2.75+(-2.5))/2=-2.625
+(|g'(x₀)|=0.7738157)<1 , converges
+xₙ₊₁=³√(-3xₙ²+3)
+
+n|xₙ|xₙ₊₁-xₙ
+0|-2.625|≰0.001
+1|-2.6047|≰0.001
+2|-2.5889|≰0.001
+3|-2.5767|≰0.001
+4|-2.5671|≰0.001
+5|-2.5596|≰0.001
+6|-2.5538|≰0.001
+7|-2.5492|≰0.001
+8|-2.5455|≰0.001
+9|-2.5427|≰0.001
+10|-2.5404|≰0.001
+11|-2.5387|≰0.001
+12|-2.5373|≰0.001
+13|-2.5362|≰0.001
+14|-2.5353|≰0.001
+15|-2.5346|≰0.001
+16|-2.5341|<0.001
+
+root=-2.5341
+
+HW4: use LU matrix decomposition to solve the system: 2x₁+x₂-3x₃=7 , 2x₁-x₂-x₃=-1 , 3x₁+4x₂-5x₃=-14
+
+HW6?: Solve the system:
+4x-8y+z=-21
+4x-y+z=z
+-2x+y+5z=15
+Using jacobi iteration with P₀=(1,2,2) and perform 4 iterations
+Soolution6?:
+|4 -8 1| |-21|
+|4 -1 1| |1  |
+|-2 1 5| |15 |
+
+P₀=(1,2,2)
+
+We make sure that the matrix is diagonally dominant
+|4 -1 1| |1  |
+|4 -8 1| |-21|
+|-2 1 5| |15 |
+
+P₀=(2,1,2)
+
+x₁=(1-(-x₂+x₃))/4
+x₂=(-21-(4x₁+x₃))/-8
+x₃=(15-(-2x₁+x₂))/5
+
+P₀=(x₁,y₁,z₁)=(2,1,2) //Alternatively (x₁,x₂,x₃) I think
+P₁=(0,-3.875,3.6)
+P₂=(-1.61875,-3.075,3.775)
+P₃=(-1.4625,-2.2875,2.9675)
+P₄=(-1.06375,-2.2646875,2.8725)
