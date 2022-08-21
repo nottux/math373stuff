@@ -76,7 +76,7 @@ HW4: use LU matrix decomposition to solve the system: 2x₁+x₂-3x₃=7 , 2x₁
 
 HW6?: Solve the system:
 4x-8y+z=-21
-4x-y+z=z
+4x-y+z=1
 -2x+y+5z=15
 Using jacobi iteration with P₀=(1,2,2) and perform 4 iterations
 Soolution6?:
